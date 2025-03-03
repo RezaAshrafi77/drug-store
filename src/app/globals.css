@@ -1,24 +1,25 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    @apply bg-gray-100 text-gray-900;
+}
+
+* {
+    font-family: regular, sans-serif;
+}
+
+nav {
+    @apply bg-purple-100 text-white shadow-md;
+}
+
+@font-face {
+    font-family: "regular";
+    font-weight: 300;
+    src: url("../../public/fonts/IRANSansX-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "demi-bold";
+    font-weight: 700;
+    src: url("../../public/fonts/IRANSansX-DemiBold.woff") format("woff");
 }
